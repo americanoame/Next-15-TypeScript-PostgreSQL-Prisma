@@ -11,26 +11,19 @@ import {
 } from "@/components/ui/sheet";
 
 import ModeToggle from "./mode-toggle";
-import { APP_NAME } from "@/lib/constants";
+
 
 const Menu = () => {
   return (
     // Main Navigation Container
-    <div className="flex justify-between items-center w-full p-4">
-      {/* Left Section - Home & Contact (Hidden on Mobile) */}
-      <div className="hidden md:flex gap-4">
-        <Link href="/" className="text-sm font-semibold">
-          Home
-        </Link>
-        <Link href="/contact" className="text-sm font-semibold">
-          Contact
-        </Link>
-      </div>
 
-      {/* Center Section - Logo */}
-      <div className="text-xl font-bold">{APP_NAME}</div>
 
-      {/* Right Section - Cart, Sign In, & Toggle (Hidden on Mobile) */}
+    // <div className="flex justify-end gap-3">
+    //         <nav className="hidden md:flex w-full max-w-xs gap-1">
+    
+    <div className="flex justify-end items-center w-full p-4">
+      
+      
       <nav className="hidden md:flex items-center gap-3">
         <ModeToggle />
 

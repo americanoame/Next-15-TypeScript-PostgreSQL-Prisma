@@ -9,6 +9,8 @@ import { useIsClient } from "@/hooks/useIsClient";
 const UploadVideo = () => {
  
 
+  
+
   // Ensure styles are applied only after the component mounts
 
   const mounted = useIsClient(); // Using the custom hook
@@ -18,7 +20,7 @@ const UploadVideo = () => {
   }
 
   return (
-    <div className="h-[400px] w-full overflow-hidden relative">
+    <div className="h-[570px] w-full overflow-hidden relative">
       <Video
         src={ecoVideo}
         

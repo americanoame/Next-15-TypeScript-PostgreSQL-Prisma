@@ -6,9 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { SearchIcon } from 'lucide-react';
 
+
+interface Category {
+  category: string;
+  _count: number;
+}
+
 const Search = () => {
-  const [categories, setCategories] = useState<any[]>([]);  // State for categories
-  const [loading, setLoading] = useState<boolean>(true);  // State for loading
+  const [categories, setCategories] = useState<Category[]>([]);  
+  const [loading, setLoading] = useState<boolean>(true);  
 
   // Fetch categories on component mount
   useEffect(() => {

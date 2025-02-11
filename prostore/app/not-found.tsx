@@ -1,4 +1,5 @@
 "use client";
+import { useIsClient } from "@/hooks/useIsClient";
 
 import { APP_NAME } from "@/lib/constants";
 import Image from "next/image";
@@ -6,6 +7,18 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const NotFoundPage = () => {
+
+
+
+  // Using the custom hook to check if the component is mounted on the client side
+  const mounted = useIsClient();
+
+  // Return null (render nothing) until the component has mounted on the client
+  if (!mounted) {
+    return null;
+  }
+
+
   return (
     <div className="flex flex-col justify-center items-center h-screen text-center">
       <div style={{ position: "relative", width: "120px", height: "48px" }}>

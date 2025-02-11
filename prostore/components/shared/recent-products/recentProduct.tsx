@@ -4,6 +4,7 @@ import { useIsClient } from "@/hooks/useIsClient";
 
 import { getRecentProducts } from "@/lib/actions/product.actions";
 import { Product } from "@/types";
+import Image from "next/image";
 
 const RecentProducts =  () => {
 
@@ -30,7 +31,7 @@ const RecentProducts =  () => {
             key={product.id}
             className="product-card flex items-center gap-4"
           >
-            <img
+            <Image
               src={product.images[0]}
               alt={product.name}
               className="w-16 h-16 object-cover"

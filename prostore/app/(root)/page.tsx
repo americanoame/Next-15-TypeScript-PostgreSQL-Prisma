@@ -13,7 +13,7 @@ const HomePage = async () => {
   return (
     <div className='space-y-8'>
       {/* <h2 className='h2-bold'>Latest Products</h2> */}
-      <ProductList data={latestProducts} title='Newest Arrivals' limit={4} />
+      <ProductList data={latestProducts} title="Save 25% on this items – now on sale!" limit={4} />
     </div>
   );
 };

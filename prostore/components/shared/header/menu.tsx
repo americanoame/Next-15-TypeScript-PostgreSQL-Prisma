@@ -11,25 +11,21 @@ import {
 } from "@/components/ui/sheet";
 
 import ModeToggle from "./mode-toggle";
-
+import Search from "./search";
 
 const Menu = () => {
   return (
     // Main Navigation Container
 
-
     // <div className="flex justify-end gap-3">
     //         <nav className="hidden md:flex w-full max-w-xs gap-1">
-    
+
     <div className="flex justify-end items-center w-full p-4">
-      
-      
       <nav className="hidden md:flex items-center gap-3">
         <ModeToggle />
 
         <Link href="/sign-in" className="flex items-center gap-2">
           <User size={18} />
-          
         </Link>
 
         <Link href="/cart">
@@ -44,6 +40,12 @@ const Menu = () => {
             <EllipsisVertical size={28} />
           </SheetTrigger>
           <SheetContent className="flex flex-col items-start">
+
+            
+            <div className="mt-10">
+              <Search />
+            </div>
+
             <SheetTitle>Menu</SheetTitle>
 
             <Link href="/">Home</Link>

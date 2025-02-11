@@ -20,7 +20,12 @@ import { getAllCategories } from "@/lib/actions/product.actions";
 // import { Product } from "@/types";
 
 const CategoriesDrawer = () => {
-  const [categories, setCategories] = useState<any[]>([]);
+  interface Category {
+    category: string;
+    _count: number;
+  }
+
+  const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
     const fetchCategories = async () => {

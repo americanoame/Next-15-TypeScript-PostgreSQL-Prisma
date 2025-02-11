@@ -3,6 +3,8 @@ import { Product } from "@/types";
 
 import UploadVideo from "../video/uploadVideo";
 
+import RecentProduct from "@/components/shared/recent-products/recentProduct";
+
 const ProductList = ({
   data,
   title,
@@ -33,15 +35,15 @@ const ProductList = ({
             <div className=" rounded-md h-[300px] flex flex-col">
               {/* Category buttons at the top */}
               <div className="flex ">
-                <button className="px-3 py-2 bg-gray-400 text-white rounded-t-md">
+                <button className="px-3 py-2 bg-yellow-400 text-white rounded-t-md">
                   Recent
                 </button>
                 <span className="px-4 py-2  text-gray-500">Popular</span>
               </div>
 
               {/* Content below the buttons */}
-              <div className="p-4 flex-1 bg-gray-400">
-                <p>Right side top content</p>
+              <div className="p-4 flex-1 bg-yellow-400">
+                <RecentProduct />
               </div>
             </div>
 
